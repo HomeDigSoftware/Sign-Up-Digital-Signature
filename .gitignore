@@ -1,0 +1,6 @@
+sign-pdf/node_modules/
+server/node_modules/
+server/.env
+server/uploads/*
+server/!uploads/.gitkeep 
+sign-pdf/.env

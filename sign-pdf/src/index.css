@@ -1,0 +1,15 @@
+/* סגנונות נוספים לתמיכה בגרירת קבצים */
+.drag-active {
+    border-color: #1976d2 !important;
+    background-color: rgba(25, 118, 210, 0.08) !important;
+  }
+  
+  /* אנימציות */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
