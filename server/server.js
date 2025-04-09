@@ -7,6 +7,7 @@ const path = require('path');
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
 const rateLimiter = require('./middleware/rateLimiter');
+const userRoutes = require('./routes/userRoutes');
 
 // התחברות למסד הנתונים
 connectDB();
@@ -31,7 +32,7 @@ app.use('/uploads', express.static('uploads'));
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/files', require('./routes/fileRoutes'));
 app.use('/api/signatures', require('./routes/signatureRoutes'));
-app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/users', userRoutes);
 
 // טיפול בשגיאות
 app.use(errorHandler);

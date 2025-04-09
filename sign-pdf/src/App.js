@@ -11,6 +11,7 @@ import FileUpload from './components/documents/FileUpload';
 import RequireAuth from './components/auth/RequireAuth';
 import DocumentList from './components/documents/DocumentList';
 import DocumentViewer from './components/documents/DocumentViewer';
+import Profile from './components/user/Profile';
 
 // יצירת ערכת נושא מותאמת לעברית
 const theme = createTheme({
@@ -66,6 +67,14 @@ function App() {
                   element={
                     <RequireAuth>
                       <DocumentViewer />
+                    </RequireAuth>
+                  } 
+                />
+                <Route 
+                  path="/profile" 
+                  element={
+                    <RequireAuth>
+                      <Profile />
                     </RequireAuth>
                   } 
                 />

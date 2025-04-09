@@ -55,6 +55,13 @@ export default function Navbar() {
             >
               התנתק
             </Button>
+            <Button 
+              color="inherit" 
+              component={Link} 
+              to="/profile"
+            >
+              פרופיל
+            </Button>
           </Box>
         ) : (
           <Box>

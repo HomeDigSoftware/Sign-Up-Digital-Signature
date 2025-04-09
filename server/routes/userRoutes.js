@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { protect } = require('../middleware/authMiddleware');
+const { updateUser, changePassword } = require('../controllers/userController');
 
 // קבלת פרטי המשתמש המחובר
 router.get('/me', protect, async (req, res) => {
@@ -32,5 +33,8 @@ router.put('/me', protect, async (req, res) => {
         next(error);
     }
 });
+
+router.put('/update', protect, updateUser);
+router.put('/change-password', protect, changePassword);
 
 module.exports = router; 
